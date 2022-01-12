@@ -20,8 +20,8 @@
     --clr-purple: #4f1c52;
     --clr-purple-secondary: #77287d;
     
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
+    --fs-h1: 2.75rem;
+    --fs-h2: 2rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
     
@@ -31,8 +31,8 @@
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
+        --fs-h1: 4rem;
+        --fs-h2: 3.25rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     }
@@ -144,8 +144,7 @@ p { font-size: var(--fs-body)}
 
 /* Masthead */
 .masthead {
-    /* background-color: var(--clr-accent); */
-    background-color: rgba(247, 184, 1, .8);
+    background-color: var(--clr-accent);
     /* min-height: 100vh; */
     
     padding-top: calc(5rem + 74px);
@@ -180,4 +179,168 @@ p { font-size: var(--fs-body)}
     .masthead .masthead-subheading {
         font-size: 1.5rem;
     }
+}
+
+
+/* about me */
+
+.about-me {
+    background-color: var(--clr-purple-secondary);
+    padding: 8rem 0;
+    height: 35em
+}
+
+.about-heading {
+    font-size: 2rem;
+    font-weight: 550;
+    margin-bottom: .8em;
+}
+
+.about-subheading {
+    font-weight: 300;
+    opacity: .9;
+}
+
+#about .card {
+    /* height: 340px; */
+    /* width: 330px; */
+    padding: 3.5em 2em;
+}
+
+.m-card {
+    margin-top: 5.5em;
+}
+
+.card-1 {
+    border-radius: 20px 20px 0 0;
+}
+
+.card-2 {
+    border-radius: 0;
+}
+
+.card-3 {
+    border-radius: 0 0 20px 20px;
+}
+
+
+@media (min-width: 768px) {
+    .card-1 {
+        border-radius: 20px 0 0 20px;
+    }
+    
+    .card-2 {
+        border-radius: 0;
+    }
+    
+    .card-3 {
+        border-radius: 0 20px 20px 0;
+    }
+}
+
+
+
+/* portofolio */
+
+@media (max-width: 320px) {
+    .portofolio {
+        padding-top: 82em !important;
+        min-height: 150vh;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .portofolio {
+        padding-top: 75em;
+        min-height: 150vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .portofolio {
+        padding-top: 390px;
+        min-height: 150vh;
+    }
+}
+
+.wrapper {
+    height: 100px !important;
+}
+
+.portofolio .m-card-0 {
+    margin: 0px !important;
+}
+
+.row > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Base styles */
+.wrapper {
+    min-height: 280px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(#000, 0.3), 0 15px 12px rgba(#000, 0.2);
+    background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center / cover no-repeat;
+    background-color: var(--clr-purple-secondary) !important;
+}
+
+.wrapper:hover {
+    background-blend-mode: screen;
+}
+
+.data {
+    color: var(--clr-light);
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    transform: translateY(calc(70px + 4em));
+    transition: transform 0.5s;
+}
+
+.portofolio-card .wrapper:hover .data {
+    transform: translateY(0);
+    bottom: 5%;
+}
+
+.content {
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+.text {
+    height: 70px;
+    margin: 0;
+    font-weight: 300;
+    opacity: .8;
+}
+
+.button {
+    display: block;
+    width: 100px;
+    margin: 2em auto 1em;
+    text-align: center;
+    font-size: 12px;
+    color: var(--clr-light) !important;
+    line-height: 1;
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button::after {
+    content: '\2192';
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: all 0.3s;
+}
+
+a.button:hover::after {
+    transform: translate(5px, -50%);
+    opacity: 1;
 }
