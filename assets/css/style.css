@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Custom Properties, update these for your own design */
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #f7b801;
+    --clr-purple: #4f1c52;
+    --clr-purple-secondary: #77287d;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+            0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General styles */
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+/* section {
+    padding: 3em 2em;
+} */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+
+/* Navigation */
+
+.bg-nav {
+    background-color: rgba(247, 184, 1, 0) !important;
+}
+
+.nav-link {
+    display: inline-block;
+    position: relative;
+    color: var(--clr-purple-secondary) !important;
+    opacity: .9;
+}
+.nav-item .nav-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--clr-purple-secondary);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-item .nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition: padding-top 0.3s, padding-bottom 0.3s, background-color .5s;
+}
+
+#home #mainNav.navbar-shrink {
+    padding-top: .5rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--clr-purple-secondary) !important;
+}
+
+#home #mainNav.navbar-shrink .nav-link {
+    color: var(--clr-light) !important;
+    opacity: 1;
+}
+
+@media (min-width: 992px) {
+}
+
+/* Masthead */
+.masthead {
+    background-color: var(--clr-accent);
+    min-height: 100vh;
+    opacity: .8 !important;
+}
