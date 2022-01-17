@@ -5,7 +5,6 @@ window.addEventListener('DOMContentLoaded', () => {
         if (!navbarCollapsible) {
             return;
         }
-        console.log(window.scrollY === 0);
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink')
         } else {
@@ -18,4 +17,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
+
 });
