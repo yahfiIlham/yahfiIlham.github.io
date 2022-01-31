@@ -287,7 +287,8 @@ p { font-size: var(--fs-body)}
 }
 
 .wrapper:hover {
-    background-blend-mode: screen;
+    background: var(--clr-purple) !important;
+    opacity: 1;
 }
 
 .data {
@@ -301,13 +302,14 @@ p { font-size: var(--fs-body)}
 
 .portofolio-card .wrapper:hover .data {
     transform: translateY(0);
-    bottom: 5%;
+    bottom: 50px;
 }
 
 .content {
     padding: 1em;
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .text {
@@ -326,6 +328,17 @@ p { font-size: var(--fs-body)}
     position: relative;
     font-weight: 700;
     text-decoration: none;
+}
+
+.data .content .btn {
+    border: 2px solid var(--clr-purple-secondary);
+    color: var(--clr-light);
+    padding: 10px 40px;
+    border-radius: 25px;
+}
+
+.data .content .btn:hover {
+    background-color: var(--clr-purple-secondary);
 }
 
 .button::after {
@@ -355,9 +368,12 @@ a.button:hover::after {
     background: url(../img/react-dashboard.png) left / cover no-repeat;
 }
 
-.wrapper-3 .button {
-    color: #0b090a !important;
-    opacity: .8;
+.wrapper-4 {
+    background: url(../img/responsive-project.png) left / cover no-repeat;
+}
+
+.wrapper-6 {
+    background: url(../img/nextjs-project.png) left / cover no-repeat;
 }
 
 /* contact */
